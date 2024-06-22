@@ -27,12 +27,12 @@ let itemLocations = {
 console.log(itemLocations.ui["tasks"])
 
 function populateStorage() {
-    localStorage.setItem("currentTasks", JSON.stringify(itemLocations));
+    sessionStorage.setItem("currentTasks", JSON.stringify(itemLocations));
 }
 
 function setTasks () {
 
-    itemLocations = JSON.parse(localStorage.getItem("currentTasks"));
+    itemLocations = JSON.parse(sessionStorage.getItem("currentTasks"));
     
     taskBoxes.forEach(function(e) {
         let taskCont = e.querySelector(".task-cont")
@@ -179,7 +179,7 @@ taskButton.addEventListener("click", async function () {
 })
 
 
-if (!(ui in localStorage.getItem("currentTasks"))) {
+if (!(ui in sessionStorage.getItem("currentTasks"))) {
     populateStorage()
 }
 setTasks()
