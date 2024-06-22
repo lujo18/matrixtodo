@@ -14,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-size: cover;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(24, 22, 46) 0%, rgba(4,0,4,1) 90% );
     color: rgb(239, 239, 241);
     padding: 3rem 0;
@@ -156,6 +157,7 @@ header p {
 
 #task-add i {
     font-size: 1.5rem;
+    color: black;
 }
 
 #task-add:hover {
