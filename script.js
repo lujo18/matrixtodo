@@ -69,17 +69,11 @@ function setTasks () {
                             checkbox.value = 0
                         }
                         
-                        
-                        console.log(itemLocations[key].tasks[index])
-                        let element = checkbox.closest(".task-wrapper").outerHTML
-                        console.log(element)
 
-                
+                        let element = checkbox.closest(".task-wrapper").outerHTML
+
                         itemLocations[key].tasks[index] = element;
 
-
-
-                        console.log(checkbox.outerHTML)
                         
                         setTimeout(() => {
                             populateStorage();
@@ -178,8 +172,8 @@ taskButton.addEventListener("click", async function () {
     chooseBox();
 })
 
-
-if (!(ui in sessionStorage.getItem("currentTasks"))) {
+console.log(sessionStorage.getItem("currentTasks"))
+if (!(sessionStorage.getItem("currentTasks"))) {
     populateStorage()
 }
 setTasks()
