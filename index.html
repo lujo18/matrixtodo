@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/45743c6752.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>The Digital Eisenhower Matrix</h1>
+        <p>Organize your tasks like a leader and never miss an important item.</p>
+    </header>
+    <main class="todo-cont">
+        <div></div>
+        <div class="horizontal-label"><p>Urgent</p></div>
+        <div class="horizontal-label"><p>Not Urgent</p></div>
+        <div class="vertical-label"><p>Important</p></div>
+        <div id="ui" class="list-box"><p>Do It</p><div class="task-cont ui-task-cont"></div></div>
+        <div id="nui" class="list-box"><p>Schedule It</p><div class="task-cont nui-task-cont"></div></div>
+        <div class="vertical-label"><p>Not Important</p></div>
+        <div id="uni" class="list-box"><p>Delegate It</p><div class="task-cont uni-task-cont"></div></div>
+        <div id="nuni" class="list-box"><p>Eliminate It</p><div class="task-cont nuni-task-cont"></div></div>
+    </main>
+    <section class="input-cont">
+        <input type="text" id="task-input" placeholder="Write your task here (Ex. Workout)">
+        <button id="task-add"><i class="fa-solid fa-plus"></i></button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
