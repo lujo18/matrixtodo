@@ -178,4 +178,8 @@ taskButton.addEventListener("click", async function () {
     chooseBox();
 })
 
+
+if (!(ui in localStorage.getItem("currentTasks"))) {
+    populateStorage()
+}
 setTasks()
