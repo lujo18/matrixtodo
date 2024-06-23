@@ -186,5 +186,6 @@ if (!(sessionStorage.getItem("currentTasks"))) {
     populateStorage()
 } else {
     welcomePage.classList.add("hide");
+    console.log("Already have a session storage")
 }
 setTasks()
