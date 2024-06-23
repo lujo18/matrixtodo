@@ -168,16 +168,18 @@ function chooseBox () {
 }
 
 let task;
-taskButton.addEventListener("click", async function () {
+taskButton.addEventListener("click", function () {
     chooseBox();
 })
 
 
 
 const welcomePage = document.querySelector("#welcome-screen");
+const bodey = document.querySelector("body")
 
 function enterApp() {
-    welcomePage.classList.add("hide")
+    welcomePage.classList.add("hide");
+    bodey.classList.add("hide");
 }
 
 
@@ -186,6 +188,7 @@ if (!(sessionStorage.getItem("currentTasks"))) {
     populateStorage()
 } else {
     welcomePage.classList.add("hide");
+    bodey.classList.add("hide");
     console.log("Already have a session storage")
 }
 setTasks()
