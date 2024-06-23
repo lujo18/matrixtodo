@@ -25,8 +25,8 @@ body {
     overflow: hidden;
 }
 
-.hide {
-    overflow:visible;
+body.hide {
+    overflow:scroll;
 }
 
 #welcome-screen {
