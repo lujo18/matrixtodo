@@ -185,6 +185,6 @@ console.log(sessionStorage.getItem("currentTasks"))
 if (!(sessionStorage.getItem("currentTasks"))) {
     populateStorage()
 } else {
-    //welcomePage.classList.add("hide");
+    welcomePage.classList.add("hide");
 }
 setTasks()
