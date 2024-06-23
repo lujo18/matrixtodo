@@ -172,8 +172,19 @@ taskButton.addEventListener("click", async function () {
     chooseBox();
 })
 
+
+
+const welcomePage = document.querySelector("#welcome-screen");
+
+function enterApp() {
+    welcomePage.classList.add("hide")
+}
+
+
 console.log(sessionStorage.getItem("currentTasks"))
 if (!(sessionStorage.getItem("currentTasks"))) {
     populateStorage()
+} else {
+    //welcomePage.classList.add("hide");
 }
 setTasks()

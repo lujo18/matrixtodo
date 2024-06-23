@@ -8,9 +8,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scrollbar-width: none;
+}
 
 
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +22,122 @@ body {
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(24, 22, 46) 0%, rgba(4,0,4,1) 90% );
     color: rgb(239, 239, 241);
     padding: 3rem 0;
+    
 }
+
+#welcome-screen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.205);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 100;
+    visibility: visible;
+    opacity: 100;
+    transition: opacity 1s cubic-bezier(.22,.04,0,.98);
+}
+
+#welcome-screen.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#welcome-cont {
+    width: min(100vw, 1500px);
+    height: 95vh;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 3px solid rgba(92, 92, 100, 0.61);
+    border-radius: 20px;
+    padding: min(2.5vw, 2rem);
+    transition: .5s cubic-bezier(.22,.04,0,.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background-color: rgba(7, 7, 7, 0.685);
+}
+
+.welcome-text {
+    font-size: min(5vw, 1.8em);
+    text-align: center;
+    width: 75%;
+}
+
+.welcome-text h1 {
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: .8em;
+}
+
+.welcome-text p {
+    font-family: "Roboto Mono", monospace;
+    margin-bottom: 1em;
+}
+
+.video-cont {
+    width: auto;
+    height: min(50vw, 500px);
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+
+.video-cont video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+
+.btn-cont {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.btn-cont p {
+    font-size: min(3vw, 1.2em);
+    width: 80%;
+    color: #5698a3;
+    margin-bottom: 2em;
+}
+
+.btn-cont span {
+    color: white;
+}
+
+.btn-cont button {
+    
+    font-size: min(5vw, 1.5em);
+    font-weight: 600;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(45deg, #5698a3, #85FFBD, #FFFB7D);
+    background-size: 300%;
+    background-position: right;
+    border: none;
+    border-radius: 50px;
+    transition: .5s cubic-bezier(.22,.04,0,.98);
+    scale: 1.00001;
+}
+
+.btn-cont button:hover {
+    background-position: left;
+    scale: 0.95;
+}
+
 
 header {
     text-align: center;
@@ -290,4 +409,21 @@ header p {
 .todo-item input[type="checkbox"][value="1"] ~ .delete-task-cont .delete-task {
     visibility: visible;
     opacity: 1;
+}
+
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    
+}
+
+footer p {
+    margin-bottom: .5em;
+    font-family: "Roboto Mono", monospace;
+}
+
+footer a {
+    color: #85FFBD;
 }

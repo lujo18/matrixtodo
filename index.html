@@ -8,6 +8,25 @@
     <script src="https://kit.fontawesome.com/45743c6752.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="welcome-screen">
+        <div id="welcome-cont">
+            <div class="welcome-text">
+                <h1>Thank you!</h1>
+                <p>This is a simple todo list designed to keep your tasks organized!</p>
+                <p>Below is a overview video of how to use it</p>
+            </div>
+            <div class="video-cont">
+                <video autoplay loop muted>
+                    <source src="Todo List Demo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="btn-cont">
+                <p><span class="warning">Note</span>: As of now all tasks created on the todo list are stored in session storage. This means that <span class="warning">if you exit out of the tab, all of your tasks will be removed</span></p>
+                <button onclick="enterApp()">Let's Go!</button>
+            </div>
+            
+        </div>
+    </div>
     <header>
         <h1>The Digital Eisenhower Matrix</h1>
         <p>Organize your tasks like a leader and never miss an important item.</p>
@@ -27,6 +46,10 @@
         <input type="text" id="task-input" placeholder="Write your task here (Ex. Workout)">
         <button id="task-add"><i class="fa-solid fa-plus"></i></button>
     </section>
+    <footer>
+        <p>Support me at <a href="https://x.com/lujotypes" target="_blank">@Lujotypes</a> on 𝕏</p>
+        <p>Thanks!</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
